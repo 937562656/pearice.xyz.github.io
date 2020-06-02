@@ -1,1 +1,105 @@
-nihao
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>软件列表</title>
+		<style type="text/css">
+			body{
+				text-align: center;
+			}
+			hr{
+				border: 2px solid #5E2D00;
+				width: 750px;
+			}
+			a{
+				text-decoration: none;
+				font-size: 22px;
+				color: #5E2D00;
+				display:inline-block;
+				text-indent: 1em;
+			}
+			a:first-child{
+				text-indent: 0;
+			}
+			a:link,a:visited{
+				text-decoration: none;
+			}
+			a:hover{
+				color: #f03;
+				text-decoration: underline;
+			}
+			dd{
+				font-size: 22px;
+				line-height: 38px;
+				font-family: "微软雅黑";
+				color: #333;
+				width: 730px;
+				text-align:  left;
+				margin: 0 auto;
+			}
+			
+			dd:before{
+				content: url(img/11.png);
+			}
+			dl{
+				display: none;
+			}
+			:target{
+				display: block;
+			}
+			dd:nth-child(odd){
+				color: #bda793;
+			}
+			dd:nth-child(2n){
+				color: peru;
+			}
+			dd:nth-child(2) em{
+				color: #f03;
+				font-weight: bold;
+				font-style: normal;
+			}
+			dd:nth-child(3) em{
+				color: #5e2d00;
+				font-weight: bold;
+				font-style: normal;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h2>网页设计软件列表(点击查看)</h2>
+		</header>
+		<hr />
+		<nav>
+			<a href="#new1">Photoshop软件</a>
+			<a href="#new2">illustrator软件</a>
+			<a href="#new3">Dreamweaver软件</a>
+			<a href="#new4">fireworks软件</a>
+		</nav>
+		<hr />
+		<dl id="new1">
+			<dt><img src="img/1.jpg"/></dt>
+			<dd>Photoshop主要处理以<em>像素</em>所构成的数字图像。</dd>
+			<dd>Photoshop使用其众多的<em>编修与绘图工具</em>，可以有效地进行图片编辑工作。</dd>
+			<dd>Photoshop可以对图像做各种变换如放大、缩小、旋转、倾斜、镜像、透视等；也可进行复制、去除斑点、修补、修饰图像的<em>残损</em>等。</dd>
+		</dl>
+		<dl id="new2">
+			<dt><img src="img/2.jpg"/></dt>
+			<dd>illustrator主要应用于<em>印刷出版</em>、海报书籍排版、专业插画、多媒体图像处理和互联网页面的制作等。</dd>
+			<dd>illustrator可以为线稿提供<em>较高的精度和控制</em>，适合生产任何小型设计到大型的复杂项目。</dd>
+			<dd>illustrator与兄弟软件——位图图形处理软件Photoshop有类似的界面，并能共享一些插件和功能，实现无缝连接。</dd>
+		</dl>
+		<dl id="new3">
+			<dt><img src="img/3.jpg"/></dt>
+			<dd>Dreamweaver是集<em>网页制作和管理</em>网站于一身的所见即所得网页代码编辑器。</dd>
+			<dd>Dreamweaver利用简洁、业界标准的代码为<em>各种不同设备</em>和计算机开发项目，提高工作效率。</dd>
+			<dd>Dreamweaver将CSS属性变化制成动画转换效果，使网页设计栩栩如生。</dd>
+		</dl>
+		<dl id="new4">
+			<dt><img src="img/4.jpg"/></dt>
+			<dd>Fireworks是一款创建与优化 Web 图像和<em>快速构建网站</em>与 Web 界面原型的理想工具</dd>
+			<dd>Fireworks不仅具备编辑矢量图形与位图图像的灵活性， 还提供了一个<em>预先构建资源的公用库</em>，并可与Adobe Photoshop、Adobe Illustrator、Adobe Dreamweaver和 Adobe Animate软件省时集成。</dd>
+			<dd>Fireworks采用预览、跨平台灰度系统预览、选择性JPEG压缩和大量导出控件，针对各种交互情况优化图像。</dd>
+		</dl>
+	</body>
+</html>
