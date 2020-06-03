@@ -166,10 +166,86 @@
 				transform: rotateX(90deg) translateZ(-300px);
 			}
 		</style>
+		<script type="text/javascript">
+			$(document).ready(function() {
+			
+			        var voice = document.getElementById('voice');
+			
+			        voice.play();
+			
+			        //判断 WeixinJSBridge 是否存在，加载WeixinJSBridge需要一定的时间
+			
+			        if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+			
+			            voice.play();
+			
+			        } else {
+			
+			            //WeixinJSBridge还未加载完时，兼听客户端抛出事件"WeixinJSBridgeReady"，如果抛出WeixinJSBridgeReady，说明WeixinJSBridge加载完毕
+			
+			           
+			
+			          if (document.addEventListener) {
+			
+			               //WeixinJSBridge加载完毕时进行播放
+			
+			                document.addEventListener("WeixinJSBridgeReady", function()  
+			
+			               {
+			
+			                    voice.play();
+			
+			                }, false);
+			
+			           // Internet Explorer 8 及更早IE版本不支持 addEventListener() 方法时用document.attachEvent
+			
+			            } else if (document.attachEvent) {
+			
+			                document.attachEvent("WeixinJSBridgeReady", function() {
+			
+			                    voice.play();
+			
+			                });
+			
+			                document.attachEvent("onWeixinJSBridgeReady", function() {
+			
+			                    voice.play();
+			
+			                });
+			
+			            }
+			
+			        }
+			
+			});
+			var voiceStatus = true;
+			
+			        document.addEventListener("touchstart", function(e) {
+			
+			            if (voiceStatus) {
+			
+			                voice.play();
+			
+			                voiceStatus = false;
+			
+			            }
+			
+			        }, false);
+		</script>
 	</head>
 	<body>
-		<div style="text-align: center;top: 1100px;position: absolute;left: 40%;margin: 0 auto;"><audio src="img/烟火 - 陈翔.mp3" controls="controls" preload="auto" autoplay="autoplay"  loop="loop"  >
-		</audio></div>
+<!-- 		<div style="text-align: center;top: 1100px;position: absolute;left: 40%;margin: 0 auto;"><audio src="img/烟火 - 陈翔.mp3" controls="controls" preload="auto" autoplay="autoplay"  loop="loop"  >
+		</audio></div> -->
+		<div class="musicPlay">
+		
+		<audio id="voice" autoplay="autoplay">
+		
+		<source src="img/烟火 - 陈翔.mp3" />
+		
+		</audio>
+		
+		</div>
+		
 		<!-- div.box按下tab -->
 		<div class="box">
 			<!-- ul.minbox>li*6 按下tab -->
